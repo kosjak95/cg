@@ -5,6 +5,8 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 import { Company } from "./pages/company";
 import { Employee } from "./pages/employee";
+import { Skill } from "./pages/skill";
+import { SiteConfig } from "./pages/siteConfig";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -15,6 +17,8 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     Company,
-    //Employee,
+    Employee,
+    Skill,
+    SiteConfig,
   ]),
 });

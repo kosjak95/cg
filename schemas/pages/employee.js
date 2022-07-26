@@ -13,5 +13,16 @@ export const Employee = {
       type: "text",
       title: "Address",
     },
+    {
+      name: "skills",
+      type: "array",
+      title: "Skills",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "skill" }],
+        },
+      ],
+    },
   ],
 };
