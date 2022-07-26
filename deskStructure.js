@@ -41,12 +41,12 @@ export default () =>
 //       ...S.documentTypeListItems().filter((listItem) =>
 //         ["siteConfig"].includes(listItem.getId())
 //       ),
-      //   S.listItem()
-      //     .title("Site configuration")
-      //     .child(
-      //       S.document()
-      //         .title("Config")
-      //         .schemaType("siteConfig")
-      //         .documentId("singleton-siteConfig")
-      //     ),
-    ]);
+//   S.listItem()
+//     .title("Site configuration")
+//     .child(
+//       S.document()
+//         .title("Config")
+//         .schemaType("siteConfig")
+//         .documentId("singleton-siteConfig")
+//     ),
+//]);
