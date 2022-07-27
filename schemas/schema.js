@@ -3,7 +3,7 @@ import createSchema from "part:@sanity/base/schema-creator";
 
 // Then import schema types from any plugins that might expose them
 import schemaTypes from "all:part:@sanity/base/schema-type";
-import { Company } from "./pages/company";
+import { Company, localeText } from "./pages/company";
 import { Employee } from "./pages/employee";
 import { Skill } from "./pages/skill";
 import { SiteConfig } from "./pages/siteConfig";
@@ -20,5 +20,6 @@ export default createSchema({
     Employee,
     Skill,
     SiteConfig,
+    localeText,
   ]),
 });

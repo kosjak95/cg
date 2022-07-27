@@ -1,3 +1,34 @@
+const supportedLanguages = [
+  { id: "en", title: "English", isDefault: true },
+  { id: "no", title: "Norwegian" },
+  { id: "fr", title: "French" },
+];
+
+const baseLanguage = supportedLanguages.find((l) => l.isDefault);
+
+export const localeText = {
+  title: "Localized text",
+  name: "localeText",
+  type: "object",
+  // Fieldsets can be used to group object fields.
+  // Here we omit a fieldset for the "default language",
+  // making it stand out as the main field.
+  fieldsets: [
+    {
+      title: "Translations",
+      name: "translations",
+      options: { collapsible: true },
+    },
+  ],
+  // Dynamically define one field per language
+  fields: supportedLanguages.map((lang) => ({
+    title: lang.title,
+    name: lang.id,
+    type: "string",
+    fieldset: lang.isDefault ? null : "translations",
+  })),
+};
+
 export const Company = {
   name: "company",
   type: "document",
@@ -10,7 +41,7 @@ export const Company = {
     },
     {
       name: "description",
-      type: "text",
+      type: "localeText",
       title: "Company Description",
     },
     {
