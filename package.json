@@ -7,7 +7,7 @@
   "author": "Jakub Kosman <jakub.kosman@fortedigital.no>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
+    "start": "cross-env SANITY_ACTIVE_ENV=development sanity start",
     "build": "sanity build",
     "graphQL": "sanity graphql deploy"
   },
@@ -28,5 +28,8 @@
     "react": "^17.0",
     "react-dom": "^17.0",
     "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
   }
 }
